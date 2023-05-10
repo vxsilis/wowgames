@@ -1,15 +1,30 @@
-  
 
-Invite friends and play mini classic games online!
+<div id="top"></div>
 
-  
+<div align="center">
+  <a href="https://github.com/vxsilis/wowgames">
+<!--     <img src="images/18mblack.png#gh-light-mode-only" alt="Logo"  height="80"> -->
+
+  </a>
+
+<h3 align="center">Wow Games</h3>
+
 
 [wowgames.gr](http://wowgames.gr) is an online platform that people and join, invite friends and play 1v1 or tournament of classic games. It is a part of an undergraduate thesis.
+    <br />
+    <br />
+    <a href="https://wowgames.gr/">Play The Game</a>
+    ·
+    <a href="https://github.com/vxsilis/wowgames/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/vxsilis/wowgames/issues">Request Feature</a>
+
+</div>
 
  
 **Build with**
 
- - node.js
+ - [node.js](https://nodejs.org/en)
  - [socket.io](http://socket.io)
 
 
@@ -17,7 +32,7 @@ Invite friends and play mini classic games online!
 
   Download or clone this repo
 
-    git clone [https://github.com/vxsilis/wowgames.git]
+    git clone https://github.com/vxsilis/wowgames.git
 
 
 There are 4 folders, 4 separate node applications.
@@ -51,6 +66,8 @@ If you want to play the games on localhost you can open the address on two DIFFE
     localhost:8000/?rc=123
 
  where *rc = room code*.
+ 
+ <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Code
 
@@ -103,10 +120,28 @@ Below there are the event emits on the 3 **games** apps.
 |shuffleCard(roomcode)| gotCards (array) |only in "memory" game| 
 
 
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-## Add New Functionality
-
-If you want to add a new game you can duplicate one of the games, for example “dont” which has more “simple” code, keep functions, styles and html elements that are used in every game.
 
 ## Contribution
 
+Do you want to fix a bug, make an enchancement, add a new game? Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you want to add a new game you can duplicate one of the games, for example “dont” which has more “simple” code, keep functions, styles and html elements that are used in every game.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+## License
+
+View code licence [here](https://github.com/vxsilis/dekaokto/blob/main/LICENSE). <br />
+All the sounds and assets are free to use except the logo which cannot be used.
+
+
+<p align="right">(<a href="#top">back to top</a>)</p>
