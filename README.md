@@ -40,6 +40,7 @@
 </details>
 
 </br>
+
 ## Installation
 
   Download or clone this repo
@@ -72,6 +73,7 @@ All over the code there are redirection links that currently point to the live w
 If you build it on localhost an idea is to run every app on different port so they all run simultaneously and redirect players from one room to a game etc.  
 
 <div id="play"></div>
+
 ## How to Play
 
 If you want to play the games on localhost you can open the address on two DIFFERENT browsers (because this game uses localStorage and it will mess up the information) and play pretending you are two different players. You just have to go to the same room on both windows. For example:
