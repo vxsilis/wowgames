@@ -10,7 +10,7 @@
 <h3 align="center">Wow Games</h3>
 
 
-[wowgames.gr](http://wowgames.gr) is an online platform that people and join, invite friends and play 1v1 or tournament of classic games. It is a part of an undergraduate thesis.
+[wowgames.gr](http://wowgames.gr) is an online platform that people can join, invite friends and play 1v1 or tournament of 3 classic games.
     <br />
     <br />
     <a href="https://wowgames.gr/">Play The Game</a>
@@ -113,7 +113,7 @@ Below there are the event emits on the 3 **games** apps.
 |joinRoom (roomcode)|  || 
 |getNumPlayers (roomcode, thePlayer)|gotNumPlayers (numClients)  || 
 |gameInitialize (roomcode)| gameInitialized || 
-|gameState (whoPlayed, winner, move, roomcode)| gameState (turn, winner, move) |small differences based on games functionality| 
+|gameState (whoPlayed, winner, move, roomcode)| gameState (turn, winner, move) |small differences based on game's functionality| 
 |wannaPlayAgain (roomcode)| wannaPlayAgain || 
 |playagaincode (roomcode, newroomcode)| playagaincode (newroomcode) || 
 |iflipped (move, roomcode)| theyflipped (move) |only in "memory" game| 
