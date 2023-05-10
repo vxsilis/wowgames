@@ -121,7 +121,7 @@ Below there are the event emits on the **main** app. The parameters for each eve
 |imWinner winner room|  |
 ||readyToPlay (firstplr, secplr, newroomcode)  |
 
-Below there are the event emits on the 3 **games** apps.
+Below there are the event emits on the 3 **game** apps.
 
 |client emits| server emits  | comments| 
 |--|--|--|
