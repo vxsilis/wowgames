@@ -34,7 +34,7 @@
     <li><a href="#installation">Installation</a></li>
     <li><a href="#play">How to Play</a></li>
     <li><a href="#code">Code</a></li>
-    <li><a href="#function"> New Functionalities & Contributions</a></li>
+    <li><a href="#function">Add Functionalities & Contributions</a></li>
     <li><a href="#license">License</a></li>
   </ul>
 </details>
