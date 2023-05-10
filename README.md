@@ -51,10 +51,11 @@
 There are 4 folders, 4 separate node applications.
 
  - **main**, the main website, login, invite friends, make lobbies
- - **dont**, a game like tic-tac-toe
- - **memory**, a memory game
- - **four**, a connect four game
+ - **dont**, a game like tic-tac-toe, https://dont.wowgames.gr
+ - **memory**, a memory game, https://memory.wowgames.gr
+ - **four**, a connect four game, https://four.wowgames.gr
 
+Don't visit the links arbitrarily though. The main page will redirect you to the right subdomain that containts the room code as well. They were mentioned just to point out that they run in different domains because they are different applications.
 
 To run these applications, navigate to each one of the folders and run
 
