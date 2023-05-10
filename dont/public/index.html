@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Don't Do It | Wow Games</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Wow Games! Invite friends and play classic minigames!">
+    <meta name="keywords" content="classic games, online, minigames, multiplayer">
+    <meta name="author" content="Vasilis Gavriilidis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+
+
+  <body>
+
+    <!-- invite div -->
+    <div class="incoming-inv">
+      <div class="incoming-grid">
+        <span class="incoming-title"> Your opponent wants to play again!</span>
+        <span class="incoming-yes"> ACCEPT</span>
+        <span class="incoming-no"> DECLINE </span>
+      </div>
+    </div>
+
+
+    <div class="up-wave-container">
+      <img class="up-wave" src="images/wave-up.png">
+    </div>
+
+
+    <div class="main-container">
+        <!-- back to home button -->
+      <a href="https://wowgames.gr/type.html" class="home-icon"></a>
+      <div class="waiting-message"> Waiting for opponent to connect...</div>
+
+      <!-- final screen message -->
+      <div class="final-messages">
+        <div id="winner-message"> YOU WON!</div>
+        <div id="win-buttons">
+          <div id="play-again" class="play-btn">
+            <span>Play again together</span>
+          </div>
+          <div id="play-new-game" class="play-btn">
+            <span>New game</span>
+          </div>
+        </div>
+      </div>
+      
+      <h2 id="whosturn"></h2>
+
+      <!-- main board -->
+      <!-- squares for every position with unique id based on row/column coordinate -->
+      <div id="board">
+        <div class="square" id="00"></div>
+        <div class="square" id="01"></div>
+        <div class="square" id="02"></div>
+        <div class="square" id="03"></div>
+        <div class="square" id="10"></div>
+        <div class="square" id="11"></div>
+        <div class="square" id="12"></div>
+        <div class="square" id="13"></div>
+        <div class="square" id="20"></div>
+        <div class="square" id="21"></div>
+        <div class="square" id="22"></div>
+        <div class="square" id="23"></div>
+        <div class="square" id="30"></div>
+        <div class="square" id="31"></div>
+        <div class="square" id="32"></div>
+        <div class="square" id="33"></div>
+      </div>
+    </div>
+
+<!-- bottom left wave -->
+    <div class="down-wave-container">
+
+<!-- sound toggle -->
+      <div class="sound-container">
+        <label>
+          <input type="checkbox" class="hidden" id="audio_setting">
+          <div class="slider"></div>
+          <span class="audio_icon" id="icon_off">
+            <i class="material-icons">volume_off</i>
+          </span>
+          <span class="audio_icon" id="icon_on">
+            <i class="material-icons">volume_up</i>
+          </span>
+        </label>
+      </div>
+
+      <img class="down-wave" src="images/wave-down.png">
+    </div>
+
+
+
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+  </body>
+</html>
