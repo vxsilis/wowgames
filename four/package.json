@@ -1,0 +1,17 @@
+{
+  "name": "four-on-the-row-game",
+  "version": "1.0.0",
+  "description": "the second game of WOWgames.gr - it is a connect-four game. Based on socket.io",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon server.js --w"
+  },
+  "author": "vasilis gavriilidis",
+  "keywords": ["socket.io", "online game"],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "socket.io": "^4.5.4"
+  }
+}
