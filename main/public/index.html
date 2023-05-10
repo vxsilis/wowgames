@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title>Wow Games | play, challenge and win</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Wow Games! Invite friends and play classic minigames!">
+    <meta name="keywords" content="classic games, online, minigames, multiplayer">
+    <meta name="author" content="Vasilis Gavriilidis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://mysqljs.com/mysql.js"></script>
+    <!-- metadata for facebook share -->
+    <meta property="og:url" content="https://www.wowgames.gr">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Wow Games | Play minigames with your friends!">
+    <meta property="og:description" content="Wow Games is an online platform in which you can invite and play online multiplayer classic games with your friends! Zap Cards, 4 on the Row and Mind Play are available now!">
+    <meta property="og:image" content="images/cover.jpg">
+  
+  </head>
+
+
+
+  <body>
+    <div class="up-wave-container">
+      <img id="upwave" class="up-wave" src="images/wave-up.png">
+    </div>
+
+    <!-- the four interactive images -->
+    <img id="homevs" src="images/homevs.png">
+    <img id="homecards" src="images/homecards.png">
+    <img id="homemind" src="images/homemind.png">
+    <img id="hometour" src="images/hometour.png">
+
+
+    <div id="maincontainer" class="main-container">
+      <div class="main-container-content">
+        <div class="home-title"> welcome to...</div>
+        <img class="logo" src="images/wow-games-logo.png">
+        <div id="home-desc" class="home-desc"> play, challenge, win </div>
+        <form action="type.html" accept-charset="utf-8">
+          <!-- form -->
+          <div class="username-input-class">
+            <label for="username">
+              <input id="username" onkeypress="return event.charCode != 32" class="username-input" type="text" name="username" placeholder=" " maxlength="9" required />
+              <span class="placeholder">enter your username</span>
+            </label>
+          </div>
+          <div onclick="newUser()" id="play-btn" class="play-btn">
+            <span id="createuserbutton">play now!</span>
+          </div>
+          <a id="about-link" class="about-link" href="about.html">(about this site)</a>
+      </div>
+      </form>
+    </div>
+
+
+    <div class="down-wave-container">
+      <img id="downwave" class="down-wave" src="images/wave-down.png">
+    </div>
+
+
+    <script>
+      window.localStorage.clear(); //clear localstorage
+      localStorage.kicked = '';
+      localStorage.sound = 'false';
+
+      // interactive animation in homepage
+      $(document).ready(function() {
+        $('body').mousemove(function(e) {
+          var pageX; // get mouse coordinates
+          var pageY;
+          var amountMovedX = (e.pageX * -1 / 10); // divide them to get smaller number
+          var amountMovedY = (e.pageY * -1 / 10);
+          $('#homevs').css('transform', 'translate(' + (-amountMovedX) + 'px, ' + (amountMovedY) + 'px)');
+          $('#hometour').css('transform', 'translate(' + (amountMovedX) + 'px, ' + (-amountMovedY) + 'px)');
+          $('#homemind').css('transform', 'translate(' + (-amountMovedX) + 'px, ' + (-amountMovedY + 10) + 'px)');
+          $('#homecards').css('transform', 'translate(' + (-amountMovedX + 10) + 'px, ' + (amountMovedY) + 'px)');
+        });
+      });
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

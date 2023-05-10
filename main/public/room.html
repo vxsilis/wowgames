@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title> Pre-Game Room | Wow Games</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Wow Games! Invite friends and play classic minigames!">
+    <meta name="keywords" content="classic games, online, minigames, multiplayer">
+    <meta name="author" content="Vasilis Gavriilidis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <style type="text/css">
+      @media only screen and (max-width: 900px) {
+
+        .available-players-container,
+        .rules {
+          width: 270px;
+          height: 230px;
+        }
+
+        .available-players-container.room {
+          height: 270px;
+        }
+      }
+    </style>
+  </head>
+
+
+  <body>
+
+  	<!-- invitation -->
+    <div class="incoming-inv">
+      <div class="incoming-grid">
+        <span class="incoming-title">
+          <span id="incoming-name"></span> wants to join your room </span>
+        <span class="incoming-yes"> ACCEPT</span>
+        <span class="incoming-no"> DECLINE </span>
+      </div>
+    </div>
+
+<!-- results/get ready to play overlay -->
+    <div class="readyToPlay">
+      <div class="readyToPlay-title">Get ready to play!</div>
+      <br>
+      <div id="results"></div>
+      <br>
+      <div class="readyToPlay-sub">You will be redirected shortly...</div>
+    </div>
+
+
+<!-- up wave -->
+    <div class="up-wave-container">
+      <img class="up-wave" src="images/wave-up.png">
+      <img id="chat" class="chat" src="images/mes-yes.png">
+
+      <!-- chat -->
+      <div id="chat-window" class="chat-window">
+        <div class="triangle-up"></div>
+        <div class="chat-title">
+          <div class="public-chat"> PRIVATE CHAT</div>
+        </div>
+        <div id="all-messages" class="all-messages"></div>
+        <div class="chat-line"></div>
+        <form for="message" id="send-container">
+          <input class="message-input" type="text" id="messageinput" placeholder="   send a message" maxlength="50" name="message">
+          <button class="skase" type="submit" id="send-button"></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- main -->
+    <div class="main-container">
+      <a href="https://wowgames.gr" class="home-icon"></a>
+      <div class="flex-center">
+        <div class="page-title-flex"> get ready</div>
+
+
+        <div class="playersNrules">
+          <div class="available-players-container room">
+
+          	<!-- room's players column -->
+            <div class="available-players-title"> players in <span class="what-room"></span>
+            </div>
+
+<!-- kick overlay -->
+            <div class="invite">
+              <div class="invite-triangle"></div>
+              <span class="invite-title"> KICK <span id="invite-user"></span>? </span>
+              <span id="kick-yes"> YES</span>
+              <span class="invite-no"> NO</span>
+            </div>
+
+            <div id="available-players-user" class="available-players-user"></div>
+
+            <div class="numPlayers">
+              <span id="numPlayers">1/6</span>
+            </div>
+          </div>
+
+          <!-- game rules column -->
+          <div class="rules room">
+            <div class="rules-title"> game rules</div>
+            <div id="rules-content"></div>
+          </div>
+        </div>
+
+
+
+        <!-- start button -->
+        <div class="startORwait">
+          <div id="start-game" class="play-btn room">
+            <span>start the game</span>
+          </div>
+          <div id="wait-game">waiting...</div>
+        </div>
+
+        <!-- status -->
+        <div class="playing-now">[you are playing a <span class="type-of-game">tournament</span>
+          <span id="what-game"></span> game in <span class="what-room"></span>]
+        </div>
+      </div>
+
+      <!-- down name -->
+      <div class="name-share">
+        <a class="share-button" target="_blank" href="http://www.facebook.com/share.php?u=https://wowgames.gr/">
+          <img src="images/share-icon.png">
+        </a>
+        <div id="my-name" class="my-name"></div>
+      </div>
+    </div>
+
+
+    <!-- down wave -->
+    <div class="down-wave-container">
+      <div class="sound-container">
+        <label>
+          <input type="checkbox" class="hidden" id="audio_setting">
+          <div class="slider"></div>
+          <span class="audio_icon" id="icon_off">
+            <i class="material-icons">volume_off</i>
+          </span>
+          <span class="audio_icon" id="icon_on">
+            <i class="material-icons">volume_up</i>
+          </span>
+        </label>
+      </div>
+      <img class="down-wave" src="images/wave-down.png">
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/chatog.js"></script>
+  </body>
+</html>

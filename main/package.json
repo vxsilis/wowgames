@@ -1,0 +1,22 @@
+{
+  "name": "wow-games-homepage",
+  "version": "1.0.0",
+  "description": "the homepage on WOWgames.gr - user connection, choosing game, chat, rooms and more. Based on socket.io",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "author": "vasilis gavriilidis",
+  "keywords": ["socket.io", "online game"],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.1",
+    "moment": "^2.29.3",
+    "mysql": "^2.18.1",
+    "socket.io": "^4.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}

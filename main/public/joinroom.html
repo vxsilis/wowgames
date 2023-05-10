@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Choose Room | Wow Games</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Wow Games! Invite friends and play classic minigames!">
+    <meta name="keywords" content="classic games, online, minigames, multiplayer">
+    <meta name="author" content="Vasilis Gavriilidis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  </head>
+
+
+  <body>
+  	<!-- invitation -->
+    <div class="incoming-inv">
+      <div class="incoming-grid">
+        <span class="incoming-title">____ wants to join your room</span>
+        <span class="incoming-yes"> ACCEPT</span>
+        <span class="incoming-no"> DECLINE </span>
+      </div>
+    </div>
+    <div class="incoming-kicked">
+      <div class="kick-grid">
+        <span class="kick-msg">YOU HAVE BEEN KICKED BY THE ROOM <span id="kick-roomname"></span>
+        </span>
+      </div>
+    </div>
+
+    <!-- up wave -->
+    <div class="up-wave-container">
+      <img class="up-wave" src="images/wave-up.png">
+      <img id="chat" class="chat" src="images/mes-yes.png">
+
+      <!-- chat -->
+      <div id="chat-window" class="chat-window">
+        <div class="triangle-up"></div>
+        <div class="chat-title">
+          <div class="public-chat"> PUBLIC CHAT</div>
+          <div class="players-online">
+            <span id="players-online">0</span> players online
+          </div>
+        </div>
+        <div id="all-messages" class="all-messages"></div>
+        <div class="chat-line"></div>
+        <form for="message" id="send-container">
+          <input class="message-input" type="text" id="messageinput" placeholder="   send a message" maxlength="50" name="message">
+          <button class="skase" type="submit" id="send-button"></button>
+        </form>
+      </div>
+    </div>
+
+    <!-- main -->
+    <div class="main-container">
+      <a href="game.html" class="home-icon"></a>
+
+
+      <div class="flex-center">
+        <div class="page-title-flex"> join a room</div>
+        <div class="joinroom-horizontal">
+
+        	<!-- available rooms -->
+          <div class="available-rooms-container">
+            <div class="available-rooms-title"> rooms available</div>
+            <div class="invite-room">
+              <div class="invite-triangle"></div>
+              <span class="invite-title"> join <span id="enter-room"></span>? </span>
+              <span id="invite-yes" class="invite-yes"> YES</span>
+              <span class="invite-no"> NO</span>
+            </div>
+            <div id="available-rooms-list" class="available-rooms-list"></div>
+          </div>
+
+<!-- create room -->
+          <div class="create-room">
+            <div class="create-room-title">create a room</div>
+            <div class="username-input-class">
+              <label for="username">
+                <input id="roomname" onkeypress="return event.charCode != 32" class="username-input" type="text" name="roomname" placeholder=" " maxlength="9" required />
+                <span class="placeholder">enter group name</span>
+              </label>
+            </div>
+            <div onclick="checkRoom()" id="play-btn" class="play-btn">
+              <span id="createroombutton">create & enter</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- status -->
+        <div class="playing-now">[you are playing a <span class="type-of-game">tournament</span>
+          <span id="what-game"></span> game]
+        </div>
+      </div>
+
+      <!-- down name -->
+      <div class="name-share">
+        <a class="share-button" target="_blank" href="http://www.facebook.com/share.php?u=https://wowgames.gr/">
+          <img src="images/share-icon.png">
+        </a>
+        <div id="my-name" class="my-name"></div>
+      </div>
+    </div>
+
+<!-- bottom wave -->
+    <div class="down-wave-container">
+      <div class="sound-container">
+        <label>
+          <input type="checkbox" class="hidden" id="audio_setting">
+          <div class="slider"></div>
+          <span class="audio_icon" id="icon_off">
+            <i class="material-icons">volume_off</i>
+          </span>
+          <span class="audio_icon" id="icon_on">
+            <i class="material-icons">volume_up</i>
+          </span>
+        </label>
+      </div>
+      <img class="down-wave" src="images/wave-down.png">
+    </div>
+
+
+    <script src="js/main.js"></script>
+    <script src="js/chatog.js"></script>
+  </body>
+</html>
