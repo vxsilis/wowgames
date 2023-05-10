@@ -89,6 +89,18 @@ Below there are the event emits on the **main** app. The parameters for each eve
 |imWinner winner room|  |
 ||readyToPlay (firstplr, secplr, newroomcode)  |
 
+Below there are the event emits on the 3 **games** apps.
+
+|client emits| server emits  | comments| 
+|--|--|--|
+|joinRoom (roomcode)|  || 
+|getNumPlayers (roomcode, thePlayer)|gotNumPlayers (numClients)  || 
+|gameInitialize (roomcode)| gameInitialized || 
+|gameState (whoPlayed, winner, move, roomcode)| gameState (turn, winner, move) |small differences based on games functionality| 
+|wannaPlayAgain (roomcode)| wannaPlayAgain || 
+|playagaincode (roomcode, newroomcode)| playagaincode (newroomcode) || 
+|iflipped (move, roomcode)| theyflipped (move) |only in "memory" game| 
+|shuffleCard(roomcode)| gotCards (array) |only in "memory" game| 
 
 
 
