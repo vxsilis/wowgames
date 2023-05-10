@@ -1,0 +1,17 @@
+{
+  "name": "mind-play-game",
+  "version": "1.0.0",
+  "description": "the third game of WOW games - it is a memory game. Based on socket.io",
+  "main": "index.js",
+  "scripts": {
+    "start":"nodemon server.js --w"
+  },
+  "keywords": ["socket.io", "online game"],
+  "author": "vasilis gavriilidis",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^2.0.20",
+    "socket.io": "^4.5.4"
+  }
+}

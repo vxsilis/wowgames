@@ -1,0 +1,490 @@
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
+
+/* general styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  transition: 0.1s;
+}
+
+
+#whosturn {
+  text-align: center;
+  margin: 20px;
+}
+
+
+.up-wave-container {
+  position: relative;
+  overflow: hidden;
+  width: 438px;
+  height: 294px;
+  float: right;
+}
+.up-wave {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.down-wave-container {
+  float: left;
+  position: relative;
+  overflow: hidden;
+  width: 438px;
+  /*height: 294px;*/
+}
+
+.down-wave {
+  position: fixed;
+  bottom: -50px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.sound-container {
+  position: fixed;
+  bottom: 50px;
+  z-index: 1;
+  left: 50px;
+}
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.slider {
+  position: absolute;
+
+  width: 70px;
+  height: 30px;
+  border-radius: 50px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  right: 0px;
+  bottom: 0px;
+  background: #fff;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0 3px gray;
+}
+
+#audio_setting:checked + .slider {
+  background: #422100;
+}
+
+#audio_setting:not(:checked) + .slider {
+  background: gray;
+}
+
+#audio_setting:not(:checked) + .slider:before {
+  right: 40px;
+}
+
+.sound-container label {
+  position: absolute;
+}
+
+.material-icons {
+  font-size: 46px;
+}
+
+.sound-container .slider:before {
+  line-height: 40px;
+  text-align: center;
+}
+
+.sound-container .sound_label {
+  position: absolute;
+  /*   top: 58px; */
+  left: 50px;
+  font-size: 1.8em;
+}
+
+.sound-container .audio_icon {
+  position: absolute;
+  top: 6px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.sound-container .material-icons {
+  font-size: 20px;
+}
+
+.sound-container #icon_on {
+  left: 45px;
+  opacity: 0;
+}
+
+.sound-container #icon_off {
+  left: 5px;
+}
+
+
+.main-container {
+  background: #e8a791;
+  width: 96vw;
+  height: 94vh;
+  border-radius: 30px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.1s;
+}
+
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.home-icon {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  height: 30px;
+  width: 30px;
+  padding-top: 60px;
+  padding-left: 60px;
+  transform-origin: center center;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  background: url("images/home.png") no-repeat;
+  background-size: 50px;
+}
+
+.home-icon:hover {
+  background: url("images/back-arrow.png") no-repeat;
+  background-size: 50px;
+  transform-origin: center center;
+  transform: rotate(-90deg) translateX(10px);
+  /*transform: rotate(-90deg);*/
+  transition: 0.2s;
+  -webkit-transition: 0.2s;
+  cursor: pointer;
+}
+
+
+.waiting-message {
+  text-align: center;
+  top: 50%;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+#winner-message {
+  display: none;
+
+  display: block;
+  text-align: center;
+  /*    top: 50%;*/
+  position: relative;
+  font-size: 3rem;
+  /*    transform: translateY(-50%);*/
+  font-weight: 700;
+}
+
+.final-messages {
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
+  gap: 20px;
+  display: none;
+  flex-direction: column;
+}
+
+#win-buttons {
+  display: none;
+  gap: 20px;
+  justify-content: center;
+}
+
+#win-redirect {
+  display: none;
+}
+
+.play-btn {
+  font-family: "Montserrat", sans-serif;
+  height: 70px;
+  width: 250px;
+  border-radius: 30px;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  font-weight: 500;
+  /*left: 50%;
+    transform: translateX(-50%);*/
+  position: relative;
+  transition: 0.1s;
+}
+
+.play-btn:hover {
+  background-color: rgba(216, 117, 73, 1);
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.play-btn span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.incoming-inv {
+  top: 0;
+  left: 0;
+  display: none;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100000000000;
+}
+
+.incoming-title {
+  grid-area: incoming-title;
+}
+.incoming-yes {
+  grid-area: incoming-yes;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: 700;
+
+  color: green;
+}
+.incoming-no {
+  grid-area: incoming-no;
+  font-size: 1.2rem;
+  cursor: pointer;
+  font-weight: 700;
+
+  color: red;
+}
+
+.incoming-grid {
+  display: grid;
+  width: 280px;
+  position: absolute;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-areas:
+    "incoming-title incoming-title"
+    "incoming-yes incoming-no";
+  transition: 0.3s;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  height: 110px;
+
+  border-radius: 10px;
+  background-color: white;
+}
+
+
+
+
+
+/* main game STYLES */
+
+
+.wrapper {
+  top: 50%;
+  position: relative;
+  transform: translateY(-60%);
+  display: none;
+  pointer-events: none;
+}
+
+.cards,
+.card,
+.view {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cards {
+  height: 510px;
+  width: 510px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: auto;
+  /*    background-color: #422100;*/
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+.cards .card {
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  height: calc(100% / 4 - 10px);
+  width: calc(100% / 4 - 10px);
+}
+.card.shake {
+  animation: shake 0.35s ease-in-out;
+}
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-13px);
+  }
+  40% {
+    transform: translateX(13px);
+  }
+  60% {
+    transform: translateX(-8px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
+}
+.card .view {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 7px;
+  background: #422100;
+  pointer-events: none;
+  backface-visibility: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s linear;
+}
+.card .front-view img {
+  width: 19px;
+  filter: brightness(11);
+}
+.card .back-view img {
+  max-width: 55px;
+}
+.card .back-view {
+  transform: rotateY(-180deg);
+  background: #e8a791;
+}
+.card.flip .back-view {
+  transform: rotateY(0);
+}
+.card.flip .front-view {
+  transform: rotateY(180deg);
+}
+
+.score {
+  display: none;
+  position: absolute;
+  top: 50%;
+
+  left: 5vw;
+  transform: translate(0%, -50%);
+}
+
+.score-title {
+  text-align: center;
+  font-weight: 800;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+
+.playercontainer {
+  font-size: 1.4rem;
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+}
+
+#playeronescore,
+#playertwoscore {
+  font-weight: 800;
+}
+
+
+/* media queries  */
+
+
+@media only screen and (max-width: 1000px) {
+  .cards {
+    height: 400px;
+    width: 400px;
+  }
+  .card .front-view img {
+    width: 17px;
+  }
+  .card .back-view img {
+    max-width: 40px;
+  }
+
+  .up-wave,
+  .down-wave {
+    display: none;
+  }
+
+  .wrapper {
+    transform: translateY(-70%);
+  }
+
+  .score {
+    top: auto;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -30%);
+  }
+
+  .incoming-grid {
+    grid-template-areas:
+      "incoming-title"
+      "incoming-yes"
+      "incoming-no";
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .cards {
+    height: 300px;
+    width: 300px;
+  }
+  .card .front-view img {
+    width: 15px;
+  }
+  .card .back-view img {
+    max-width: 35px;
+  }
+}

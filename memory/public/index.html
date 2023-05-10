@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+    <title>Mind Play | Wow Games</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Wow Games! Invite friends and play classic minigames!">
+    <meta name="keywords" content="classic games, online, minigames, multiplayer">
+    <meta name="author" content="Vasilis Gavriilidis">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="images/favicon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+
+  <body>
+
+    <!-- invitation div -->
+    <div class="incoming-inv">
+      <div class="incoming-grid">
+        <span class="incoming-title"> Your opponent wants to play again!</span>
+        <span class="incoming-yes"> ACCEPT</span>
+        <span class="incoming-no"> DECLINE </span>
+      </div>
+    </div>
+    <!-- up right wave -->
+    <div class="up-wave-container">
+      <img class="up-wave" src="images/wave-up.png">
+    </div>
+
+
+    <div class="main-container">
+      <!-- back to home button -->
+      <a href="https://wowgames.gr/type.html" class="home-icon"></a>
+
+      <div class="waiting-message"> Waiting for opponent to connect...</div>
+
+<!-- final screen message -->
+      <div class="final-messages">
+        <div id="winner-message"> YOU WON!</div>
+        <div id="win-buttons">
+          <div id="play-again" class="play-btn">
+            <span>Play again together</span>
+          </div>
+          <div id="play-new-game" class="play-btn">
+            <span>New game</span>
+          </div>
+        </div>
+      </div>
+
+      <h2 id="whosturn"></h2>
+
+
+
+      
+      <!-- the scores of the two players -->
+      <div class="score">
+        <div class="score-title">score</div>
+        <div class="playercontainer">
+          <div id="playeronename">player1</div>
+          <div id="playeronescore"></div>
+        </div>
+        <div class="playercontainer">
+          <div id="playertwoname">player2</div>
+          <div id="playertwoscore"></div>
+        </div>
+      </div>
+
+<!-- main board -->
+<!-- a "list" of cards . everycard has a front view which is the neuteral question mark image and the back which is the unique image. unique ids to target the chosen card-->
+
+      <div class="wrapper">
+        <ul class="cards">
+          <li id="one" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_1.png">
+            </div>
+          </li>
+          <li id="two" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_6.png">
+            </div>
+          </li>
+          <li id="three" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_3.png">
+            </div>
+          </li>
+          <li id="four" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_2.png">
+            </div>
+          </li>
+          <li id="five" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_1.png">
+            </div>
+          </li>
+          <li id="six" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_5.png">
+            </div>
+          </li>
+          <li id="seven" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_2.png">
+            </div>
+          </li>
+          <li id="eight" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_6.png">
+            </div>
+          </li>
+          <li id="nine" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_3.png">
+            </div>
+          </li>
+          <li id="ten" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_4.png">
+            </div>
+          </li>
+          <li id="eleven" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_5.png">
+            </div>
+          </li>
+          <li id="twelve" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_4.png">
+            </div>
+          </li>
+          <li id="thirteen" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_4.png">
+            </div>
+          </li>
+          <li id="fourteen" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_4.png">
+            </div>
+          </li>
+          <li id="fifteen" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_4.png">
+            </div>
+          </li>
+          <li id="sixteen" class="card">
+            <div class="view front-view">
+              <img src="images/que_icon.svg">
+            </div>
+            <div class="view back-view">
+              <img src="images/img_4.png">
+            </div>
+          </li>
+        </ul>
+      </div>
+
+
+    </div>
+
+<!-- bottom left wave -->
+    <div class="down-wave-container">
+
+<!-- sound toggle -->
+      <div class="sound-container">
+        <label>
+          <input type="checkbox" class="hidden" id="audio_setting">
+          <div class="slider"></div>
+          <span class="audio_icon" id="icon_off">
+            <i class="material-icons">volume_off</i>
+          </span>
+          <span class="audio_icon" id="icon_on">
+            <i class="material-icons">volume_up</i>
+          </span>
+        </label>
+      </div>
+
+      <img class="down-wave" src="images/wave-down.png">
+    </div>
+
+
+
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="game.js"></script>
+  </body>
+</html>
