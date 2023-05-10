@@ -64,7 +64,7 @@ to install all the necessary dependencies
 
     npm run start
 
-  to start the application . It will print on what port of localhost is currently running. *Main* runs on 3030 and the *3 games* on 8000.
+  to start the application . It will print on what port of localhost is currently running.
 
  For the  *main* folder, on **server.js** you have to connect to a database with a specific architecture for it to work properly.
 
