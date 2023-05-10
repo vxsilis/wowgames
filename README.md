@@ -34,7 +34,7 @@
     <li><a href="#installation">Installation</a></li>
     <li><a href="#play">How to Play</a></li>
     <li><a href="#code">Code</a></li>
-    <li><a href="#contribution">Contribution</a></li>
+    <li><a href="#function"> New Functionalities & Contributions</a></li>
     <li><a href="#license">License</a></li>
   </ul>
 </details>
@@ -138,11 +138,30 @@ Below there are the event emits on the 3 **game** apps.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-## Contribution
+<div id="#function"></div>
+
+## Add functionalities & Contribution
+
+
+All of the pages share similar `html` files and layout.
+On the game apps, if you want to change something but keep the template of the file you can change the contain after the comment
+
+    <!-- main board -->
+or something like that based on the game. Code before and after that should be untouched for them to keep the same structure. For example divs like:
+
+    .down-wave-container
+    .incoming-inv
+    .up-wave-container
+should exist on every page.
+On the css files of the games you can add your own styles after the comment
+
+    /* main game STYLES */
+and keep the styles after 
+
+    /* general styles */
+
 
 Do you want to fix a bug, make an enchancement, add a new game? Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you want to add a new game you can duplicate one of the games, for example “dont” which has more “simple” code, keep functions, styles and html elements that are used in every game.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star!
 
