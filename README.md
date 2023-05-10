@@ -27,8 +27,20 @@
  - [node.js](https://nodejs.org/en)
  - [socket.io](http://socket.io)
 
+</br>
+<details>
+  <summary>Table of Contents</summary>
+  <ul>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#play">How to Play</a></li>
+    <li><a href="#code">Code</a></li>
+    <li><a href="#contribution">Contribution</a></li>
+    <li><a href="#license">License</a></li>
+  </ul>
+</details>
 
-## **How to Install**
+</br>
+## Installation
 
   Download or clone this repo
 
@@ -59,6 +71,7 @@ All over the code there are redirection links that currently point to the live w
 
 If you build it on localhost an idea is to run every app on different port so they all run simultaneously and redirect players from one room to a game etc.  
 
+<div id="play"></div>
   ## How to Play
 
 If you want to play the games on localhost you can open the address on two DIFFERENT browsers (because this game uses localStorage and it will mess up the information) and play pretending you are two different players. You just have to go to the same room on both windows. For example:
@@ -140,7 +153,7 @@ If you have a suggestion that would make this better, please fork the repo and c
 
 ## License
 
-View code licence [here](https://github.com/vxsilis/dekaokto/blob/main/LICENSE). <br />
+View code licence [here](https://github.com/vxsilis/wowgames/blob/main/LICENSE). <br />
 All the sounds and assets are free to use except the logo which cannot be used.
 
 
