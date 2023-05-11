@@ -97,29 +97,29 @@ Below there are the event emits on the **main** app. The parameters for each eve
   
 |client emits| server emits  |
 |--|--|
-|imHere name| areUhere |
-|chatMessage msg| message msg |
-|checkUsername usercheck, who| checkedUser, result |
-|newUser name socketid|  |
-|checkRoomname roomname| checkedRoom, result |
-|newRoom, roomname, roomgame, owner|  |
-|setGame name, game|  |
-|setInGame name|  |
-|updateUserSocket, name, socketid|  |
-|giveMePlayers, game, room, type| takePlayers results |
-|giveMeRooms, game| takeRoom results |
-|invite from, to| incoming from, to |
-|join from, to| incomingjoin from, to |
-|decline who, bywho|declined, who  |
-|letsplay firstplr, secplr|  |
-|countplayers room | countplayers, results |
-|acceptToJoin opponent, room| imaccepted opponent,room |
-|kick name,room|kicked name, room  |
-|startTour room, playersArray| startTour results, roomCodes |
-|deleteRoom room|  |
-|finalWinner winnerplayers, room| finalWinner winnerplayers |
-|getRoomWinners room|roomWinners , roomwinners  |
-|imWinner winner room|  |
+|imHere (name| areUhere |
+|chatMessage (msg)| message (msg) |
+|checkUsername (usercheck, who)| checkedUser (result) |
+|newUser (name socketid)|  |
+|checkRoomname (roomname)| checkedRoom (result) |
+|newRoom (roomname, roomgame, owner)|  |
+|setGame (name, game)|  |
+|setInGame (name)|  |
+|updateUserSocket (name, socketid)|  |
+|giveMePlayers (game, room, type)| takePlayers (results) |
+|giveMeRooms (game)| takeRoom (results) |
+|invite (from, to)| incoming (from, to) |
+|join (from, to)| incomingjoin (from, to) |
+|decline (who, bywho)|declined (who)  |
+|letsplay (firstplr, secplr)|  |
+|countplayers (room) | countplayers (results) |
+|acceptToJoin (opponent, room)| imaccepted (opponent,room) |
+|kick (name,room)|kicked (name, room)  |
+|startTour (room, playersArray)| startTour (results, roomCodes) |
+|deleteRoom (room)|  |
+|finalWinner (winnerplayers, room)| finalWinner (winnerplayers) |
+|getRoomWinners (room)|roomWinners (roomwinners)  |
+|imWinner (winner room)|  |
 ||readyToPlay (firstplr, secplr, newroomcode)  |
 
 Below there are the event emits on the 3 **game** apps.
