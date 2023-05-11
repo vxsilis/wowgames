@@ -10,7 +10,7 @@
 <h3 align="center">Wow Games</h3>
 
 
-[wowgames.gr](http://wowgames.gr) is an online platform that people can join, invite friends and play 1v1 or tournament of 3 classic games.
+[wowgames.gr](http://wowgames.gr) is an online platform in which people can join, invite friends and play 1v1 or tournament of 3 classic games.
     <br />
     <br />
     <a href="https://wowgames.gr/">Play The Game</a>
