@@ -97,7 +97,7 @@ Below there are the event emits on the **main** app. The parameters for each eve
   
 |client emits| server emits  |
 |--|--|
-|imHere (name| areUhere |
+|imHere (name)| areUhere |
 |chatMessage (msg)| message (msg) |
 |checkUsername (usercheck, who)| checkedUser (result) |
 |newUser (name socketid)|  |
