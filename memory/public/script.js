@@ -26,7 +26,7 @@ let rc = params.rc;
 if (rc == null) {// if there is no code passed as parameter go to homepage
     $('.waiting-message').html("looks like you shouldn't be here.. you will be redirected to homepage");
     setTimeout(function() {
-        window.location.href = "https://wowgames.gr/type.html";
+        window.location.href = "https://wowgames.gr/";
     }, 3000);
 }
 
