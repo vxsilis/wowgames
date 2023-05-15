@@ -176,7 +176,11 @@ If you have a suggestion that would make this better, please fork the repo and c
 ## License
 
 View code licence [here](https://github.com/vxsilis/wowgames/blob/main/LICENSE). <br />
-All the sounds and assets are free to use except the logo which cannot be used.
+All the sounds and assets are free to use except the logo which cannot be used.</br>
+For the four or the row game it has been used code from [here](https://github.com/jahid28/Games/tree/main/Connect4).</br>
+For the memory game it has been used code from [here](https://www.codingnepalweb.com/build-memory-card-game-html-javascript).</br>
+Both of the code have been modified with a lot of new additional stuff making them actually turn based games for two different players as well as the functionality to keep track of each player's score and if in case of a tie the game resets without losing the score.
+
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
