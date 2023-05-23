@@ -172,31 +172,33 @@ function iplayed(e) {
 
     }, 500);
 
-    // if array is full
-    if (isFull(gridArr)) {
-        //delete images from inside the squares
+    setTimeout(() => {
+        // if array is full
+        if (isFull(gridArr)) {
+            //delete images from inside the squares
 
-        squares.forEach((square) => {
-            const img = square.querySelector('img');
-            if (img) {
-                img.remove();
-            }
-            // put click listeners again
-            square.addEventListener('click', iplayed);
+            squares.forEach((square) => {
+                const img = square.querySelector('img');
+                if (img) {
+                    img.remove();
+                }
+                // put click listeners again
+                square.addEventListener('click', iplayed);
 
-        });
+            });
 
-        // initialize array with 0s
-        gridArr = [
-            [0, 0, 0, 0],
-            [0, 0, 0, 0],
-            [0, 0, 0, 0],
-            [0, 0, 0, 0]
-        ];
+            // initialize array with 0s
+            gridArr = [
+                [0, 0, 0, 0],
+                [0, 0, 0, 0],
+                [0, 0, 0, 0],
+                [0, 0, 0, 0]
+            ];
 
-        rotate();
+            rotate();
 
-    }
+        }
+    }, 900);
 
 }
 
@@ -277,29 +279,32 @@ function theyplayed(id) {
 
     }, 500);
 
-    if (isFull(gridArr)) {
-        //delete images from inside the squares
+    setTimeout(() => {
 
-        squares.forEach((square) => {
-            const img = square.querySelector('img');
-            if (img) {
-                img.remove();
-            }
-            // put click listeners again
-            square.addEventListener('click', iplayed);
-        });
+        if (isFull(gridArr)) {
+            //delete images from inside the squares
 
-        // initialize array with 0s
-        gridArr = [
-            [0, 0, 0, 0],
-            [0, 0, 0, 0],
-            [0, 0, 0, 0],
-            [0, 0, 0, 0]
-        ];
+            squares.forEach((square) => {
+                const img = square.querySelector('img');
+                if (img) {
+                    img.remove();
+                }
+                // put click listeners again
+                square.addEventListener('click', iplayed);
+            });
 
-        rotate();
+            // initialize array with 0s
+            gridArr = [
+                [0, 0, 0, 0],
+                [0, 0, 0, 0],
+                [0, 0, 0, 0],
+                [0, 0, 0, 0]
+            ];
 
-    }
+            rotate();
+
+        }
+    }, 900);
 
 }
 
