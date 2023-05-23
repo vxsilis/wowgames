@@ -80,9 +80,9 @@ function matchCards(img1, img2) {
             played.play();
         }
         matchedf();
-        // remove event listeners (click)
-        $(cardOne).off("click", flipCard);
-        $(cardTwo).off("click", flipCard);
+        // remove event listeners
+        $(cardOne).off();
+        $(cardTwo).off();
         cardOne = cardTwo = "";
         return disableDeck = false;
     }
@@ -112,9 +112,24 @@ function matchedf() {
     matched++;
     
     if (turnp != myname) { // currently my turn
-
+        // myscore++;
+    
         if (matched == 8) {
             // myscore++;
+
+            // update score for now 
+
+            if (localStorage.scorenum = "#playeronescore"){
+                myscore++;
+                scoreone++;
+                
+            }else{
+                myscore++;
+                scoretwo++;
+                
+            }         
+
+
             // check which player has highest score and call the function with the right parameters
             if (scoreone > scoretwo) {
                 winner(cardnowID, "p1");
