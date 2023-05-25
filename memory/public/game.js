@@ -155,6 +155,11 @@ function matchedf() {
 
 
 
+// HOW TO BUTTON
+$('.howto').click(function() {
+
+    $('.rules').toggleClass("open");
+});
 
 
 // SOUND CONTROL
