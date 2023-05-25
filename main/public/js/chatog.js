@@ -45,6 +45,25 @@ chatForm.addEventListener('submit', (e) => {
 
 });
 
+// submit message with "enter" button
+chatForm.addEventListener('keydown', (e) => {
+    if (e.keyCode === 13) { // enter key code is 13
+        e.preventDefault();
+
+        //get message text from form input
+        const msg = $('#messageinput').val();
+
+        // emit a message to the server
+        socket.emit('chatMessage', msg);
+
+        // Clear input
+        msg.value = '';
+        $('#messageinput').val('');
+        
+    }
+
+});
+
 
 // output message to window
 function outputMessage(message) {
