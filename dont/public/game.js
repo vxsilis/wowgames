@@ -349,6 +349,14 @@ function checkForLoser(grid) {
     return null;
 }
 
+// HOW TO BUTTON
+$('.howto').click(function() {
+
+    $('.rules').toggleClass("open");
+});
+
+
+
 // SOUND CONTROL
 
 //check the input of the toggle on click
