@@ -119,15 +119,15 @@ function matchedf() {
 
             // update score for now 
 
-            if (localStorage.scorenum = "#playeronescore"){
-                myscore++;
-                scoreone++;
+//             if (localStorage.scorenum = "#playeronescore"){
+//                 myscore++;
+//                 scoreone++;
                 
-            }else{
-                myscore++;
-                scoretwo++;
+//             }else{
+//                 myscore++;
+//                 scoretwo++;
                 
-            }         
+//             }         
 
 
             // check which player has highest score and call the function with the right parameters
