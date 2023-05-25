@@ -545,4 +545,12 @@ h2 {
   .card .back-view img {
     max-width: 35px;
   }
+    .howto {
+    width: 40px;
+    margin-top: 50px;
+  }
+  .rules{
+    right: 10px;
+    top: 150px;
+  }
 }
